@@ -1,0 +1,91 @@
+=======================DVE Context and Call Stack=========================
+Command line: /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/gui/dve/linux64/bin/dve.exe -full64 -ucliplatform=amd64 -toolargs "-ucligui -toolexe ./simv  -pid 14322" -toolin /tmp/vcs_20240417063548_14321_skuniset..stdin -toolout /tmp/vcs_20240417063548_14321_skuniset..stdout
+
+--- Stack trace follows:
+[New LWP 14571]
+[New LWP 14568]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+
+warning: Cannot parse .gnu_debugdata section; LZMA support was disabled at compile time
+0x00007f7e7cf09659 in waitpid () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f7e7af24700 (LWP 14568)):
+#0  0x00007f7e7eb79a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f7e7dd7e940 in ?? () from /lib64/libX11.so.6
+#2  0x00007f7e7dd7ee39 in ?? () from /lib64/libX11.so.6
+#3  0x00007f7e7dd7413a in XFreeCursor () from /lib64/libX11.so.6
+#4  0x0000000002875d17 in QCursorData::~QCursorData() ()
+#5  0x000000000287622e in QCursor::~QCursor() ()
+#6  0x000000000287626c in ?? ()
+#7  0x00007f7e7ce7dce9 in __run_exit_handlers () from /lib64/libc.so.6
+#8  0x00007f7e7ce7dd37 in exit () from /lib64/libc.so.6
+#9  0x000000000285f48c in ?? ()
+#10 0x00007f7e7dd9349e in _XIOError () from /lib64/libX11.so.6
+#11 0x00007f7e7dd90dfd in _XEventsQueued () from /lib64/libX11.so.6
+#12 0x00007f7e7dd6d1f4 in XCheckTypedEvent () from /lib64/libX11.so.6
+#13 0x00000000010dcecb in ag::dveXThread::run() ()
+#14 0x00000000028b388a in QThreadInstance::start(void*) ()
+#15 0x00007f7e7eb75ea5 in start_thread () from /lib64/libpthread.so.0
+#16 0x00007f7e7cf42b0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f7e7a723700 (LWP 14571)):
+#0  0x00007f7e7cf33b5d in read () from /lib64/libc.so.6
+#1  0x00007f7e7cebfd54 in __GI__IO_file_underflow () from /lib64/libc.so.6
+#2  0x00007f7e7cec0f22 in __GI__IO_default_uflow () from /lib64/libc.so.6
+#3  0x00007f7e7ceb3cd4 in __GI__IO_getline_info () from /lib64/libc.so.6
+#4  0x00007f7e7ceb2ad6 in fgets () from /lib64/libc.so.6
+#5  0x00000000011f55f3 in ag::dveSmlSocket::run() ()
+#6  0x00000000028b388a in QThreadInstance::start(void*) ()
+#7  0x00007f7e7eb75ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f7e7cf42b0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f7e8099d840 (LWP 14336)):
+#0  0x00007f7e7cf09659 in waitpid () from /lib64/libc.so.6
+#1  0x00007f7e7ce86f62 in do_system () from /lib64/libc.so.6
+#2  0x00007f7e7ce87311 in system () from /lib64/libc.so.6
+#3  0x00007f7e7ff9fdf8 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so
+#4  0x00007f7e7ffa038d in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so
+#5  0x00007f7e7ffa169b in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so
+#6  0x00007f7e7ff9a465 in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so
+#7  0x0000000001f9a415 in ag::logErrorMessage(ag::errorType, QString const&, bool) ()
+#8  0x0000000001f9abc3 in ?? ()
+#9  0x00007f7e7ce7dcc9 in __run_exit_handlers () from /lib64/libc.so.6
+#10 0x00007f7e7ce7dd37 in exit () from /lib64/libc.so.6
+#11 0x000000000285f48c in ?? ()
+#12 0x00007f7e7dd9349e in _XIOError () from /lib64/libX11.so.6
+#13 0x00007f7e7dd90dfd in _XEventsQueued () from /lib64/libX11.so.6
+#14 0x00007f7e7dd8280d in XPending () from /lib64/libX11.so.6
+#15 0x000000000287c64c in QEventLoop::processEvents(unsigned int) ()
+#16 0x000000000111e651 in ag::ovaEventLoop::processEvents(unsigned int) ()
+#17 0x00000000028ca039 in QEventLoop::enterLoop() ()
+#18 0x00000000028c9f9a in QEventLoop::exec() ()
+#19 0x000000000111dfbf in run_cci_event_loop ()
+#20 0x00000000010ddae4 in ag::ovaAppInst::enterEventLoop(int, char**) ()
+#21 0x0000000000de2c2f in main ()
+No context available
+==========================================================================

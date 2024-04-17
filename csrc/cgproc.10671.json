@@ -1,0 +1,19 @@
+{
+    "Modules": {
+        "testbench": {},
+        "std": {},
+        "...MASTER...": {},
+        "_vcs_unit__2006914835": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 7457,
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": []
+}

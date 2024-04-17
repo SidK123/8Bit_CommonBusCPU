@@ -1,0 +1,5 @@
+/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/computer.sv
+/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/internal_defines.vh
+/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/internal_structures.sv
+/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/microcodes.sv
+/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/testbench.sv

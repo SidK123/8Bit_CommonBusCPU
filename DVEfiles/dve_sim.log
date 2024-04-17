@@ -1,0 +1,62 @@
+03:40:45    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 10807 -toolin /tmp/vcs_20240417074042_10805_skuniset..stdin -toolout /tmp/vcs_20240417074042_10805_skuniset..stdout  
+03:40:45    17 -->                                                                 [tcl] set ucliGUI::state
+03:40:45    18 -->                                                                     [tcl] gui_update_simulator_buttons
+03:40:46    19 -->                                                                         [tcl] set ucliGUI::state
+03:40:46    20 -->                                                                             [tcl] ucliCore::getToolPID
+03:40:46    21 -->                                                                                 [tcl] synopsys::env hasTB
+03:40:46    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
+03:40:46    23 -->                                                                                         [tcl] synUtils::setDVEInitPhase 1
+03:40:46    24 -->                                                                                             [tcl] gui_get_env SIMSETUP::SIMVPD
+03:40:46    25 --> ...  [tcl] synopsys::dump -type VPD -file /afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/inter.vpd -locking
+03:40:46    26 --> ...      [tcl] synopsys::dump -autoflush on -fid VPD0
+03:40:46    27 --> ...          [tcl] set ::dve_fid VPD0
+03:40:46    28 --> ...              [tcl] synUtils::setDVEInitPhase 0
+03:40:46    29 --> ...                  [tcl] ucliCore::getToolPID
+03:40:46    30 --> ...                      [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpwZtW07
+03:40:46    31 --> ...                          [tcl] synUtils::sendTool -active {_icl_start_rpc -version "K-2015.09_Full64" -sync_file /tmp/vcs_dve_rpc.skuniset.10807}
+03:40:46    32 --> ...                              [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.skuniset.10807}
+03:40:46    33 --> ...                                  [tcl] dveMisc::vbusExpand testbench
+03:40:46    34 --> ...                                      [tcl] dveMisc::vbusExpand _vcs_unit__2006914835
+03:40:46    35 --> ...                                          [tcl] config endofsim noexit
+03:40:46    36 --> ...                                              [tcl] config onfail enable all
+03:40:46    37 --> ...                                                  [tcl] config syscaddplainmembers
+03:40:46    38 --> ...                                                      [tcl] config syscaddsourcenames
+03:40:46    39 --> ...                                                          [tcl] config syscaddstructtypes
+03:40:46    40 --> ...                                                              [tcl] synopsys::listing -disable
+03:40:49    41 --> ...                                                                  [tcl] dveMisc::vbusExpand testbench.CPU
+03:40:50    42 --> ...                                                                      [tcl] dveMisc::vbusExpand testbench.CPU.ALU_src1
+03:40:52    43 --> ...                                                                          [tcl] synopsys::dump -add {testbench.CPU} -scope "." -depth 1 -fid VPD0
+03:40:52    44 --> ...                                                                              [tcl] synopsys::dump -add {testbench.CPU.reg_sel} -scope "." -depth 1 -fid VPD0
+03:40:52    45 --> ...                                                                                  [tcl] synopsys::dump -add {_vcs_unit__2006914835} -aggregates  -fid VPD0
+03:40:52    46 --> ...                                                                                      [tcl] dveMisc::vbusExpand testbench.CPU.reg_sel
+03:40:52    47 --> ...                                                                                          [tcl] synopsys::dump -add {testbench.CPU.reg_file} -scope "." -depth 1 -fid VPD0
+03:40:52    48 --> ...                                                                                              [tcl] dveMisc::vbusExpand testbench.CPU.reg_file
+03:40:52    49 --> ...                                                                                                  [tcl] synopsys::dump -add {testbench.CPU.pc} -scope "." -depth 1 -fid VPD0
+03:40:52    50 --> ...  [tcl] dveMisc::vbusExpand testbench.CPU.pc
+03:40:53    51 --> ...      [tcl] synopsys::dump -add {testbench.CPU.microcode} -scope "." -depth 1 -fid VPD0
+03:40:53    52 --> ...          [tcl] dveMisc::vbusExpand testbench.CPU.microcode
+03:40:53    53 --> ...              [tcl] synopsys::dump -add {testbench.CPU.ir} -scope "." -depth 1 -fid VPD0
+03:40:53    54 --> ...                  [tcl] dveMisc::vbusExpand testbench.CPU.ir
+03:40:53    55 --> ...                      [tcl] synopsys::dump -add {testbench.CPU.alu_inst} -scope "." -depth 1 -fid VPD0
+03:40:53    56 --> ...                          [tcl] dveMisc::vbusExpand testbench.CPU.alu_inst
+03:40:53    57 --> ...                              [tcl] synopsys::dump -add {testbench.CPU.ALU_src2} -scope "." -depth 1 -fid VPD0
+03:40:53    58 --> ...                                  [tcl] dveMisc::vbusExpand testbench.CPU.ALU_src2
+03:40:53    59 --> ...                                      [tcl] synopsys::dump -add {testbench.CPU.ALU_src1} -scope "." -depth 1 -fid VPD0
+03:40:55    60 --> ...                                          [tcl] synopsys::run
+03:40:55    61 --> ...                                              [tcl] set ucliGUI::state
+03:40:55    62 --> ...                                                  [tcl] set ucliGUI::state
+03:40:55    63 --> ...                                                      [tcl] set ucliGUI::state
+03:40:55    64 --> ...                                                          [tcl] set ucliGUI::state
+03:40:55    65 --> ...                                                              [tcl] catch {senv activeDomain} dveMisc::result 
+03:40:55    66 --> ...                                                                  [tcl] set dveMisc::result
+03:40:55    67 --> ...                                                                      [tcl] gui_update_simulator_buttons
+03:41:00    68 --> ...                                                                          [tcl] if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+03:41:00    69 --> ...                                                                              [tcl] synopsys::finish
+03:41:00    70 --> ...                                                                                  [tcl] set ucliGUI::state
+03:41:00    71 --> ...                                                                                      [tcl] set ucliGUI::state
+03:41:00    72 --> ...                                                                                          [tcl] catch {senv activeDomain} dveMisc::result 
+03:41:00    73 --> ...                                                                                              [tcl] set dveMisc::result
+03:41:00    74 --> ...                                                                                                  [tcl] gui_update_simulator_buttons
+03:41:00    75 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
+03:41:00    76 --> ...      [tcl] set dveMisc::result
+03:41:00    77 --> ...          [tcl] ucli_exit

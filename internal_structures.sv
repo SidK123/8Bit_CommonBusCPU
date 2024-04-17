@@ -1,4 +1,5 @@
 `default_nettype none
+`include "internal_defines.vh"
 
 
 /*
@@ -30,16 +31,16 @@ register takes on the value of the next instruction to be processed.
  */
 module Instruction_Register(
   input  logic        ir_load_en, clock, reset_n,
-  input  logic [7:0]  next_ir,
-  output logic [7:0]  ir
+  input  logic [13:0] instruction,
+  output logic [13:0] instruction_register 
 );
 
   always_ff @(posedge clock, negedge reset_n) begin
     if(~reset_n) begin
-      ir <= 8'd0;
+      instruction_register <= 13'd0;
     end
     else if (ir_load_en) begin
-      ir <= ir_next;
+      instruction_register <= instruction;
     end
   end
 
@@ -52,13 +53,21 @@ of that operation on the two operands.
 */
 module ALU(
   input  logic [7:0]  alu_src_1, alu_src_2,
-  input  logic [2:0]  alu_op,
+  input  alu_op_t     alu_op,
   output logic [7:0]  alu_out
 );
 
   always_comb begin
     case(alu_op)
-
+      A_PLUS_B:  alu_out = alu_src_1 + alu_src_2;
+      A_MINUS_B: alu_out = alu_src_1 - alu_src_2;
+      A_XOR_B:   alu_out = alu_src_1 ^ alu_src_2;
+      A_NAND_B:  alu_out = ~(alu_src_1 & alu_src_2);
+      A_NOR_B:   alu_out = ~(alu_src_1 | alu_src_2);
+      A_SLL_B:   alu_out = (alu_src_1 << alu_src_2);
+      A_SRL_B:   alu_out = (alu_src_1 >> alu_src_2);
+      A_SRA_B:   alu_out = (alu_src_1 >>> alu_src_2);
+      default:   alu_out = alu_src_1 + alu_src_2;
     endcase
   end
 
@@ -95,27 +104,29 @@ are 8 bit values.
 module Register_File(
   input  logic clock, reset_n,
   input  logic rf_write_read,
-  input  logic [1:0] address,
+  input  logic [7:0] address,
   input  logic [7:0] w_data,
   output logic [7:0] r_data,
-  output logic [7:0] output_reg
+  output logic [7:0] output_reg_val
 );
 
-  logic [1:0][7:0] reg_file;
+  logic [7:0][7:0] reg_file;
+  logic [2:0]      output_reg_addr;
 
-  assign output_reg = reg_file[2'd4];
+  assign output_reg_addr = 3'd7;
+
+  assign output_reg_val = reg_file[output_reg_addr];
 
   always_ff @(posedge clock, negedge reset_n) begin
     if(~reset_n) begin
-      reg_file <= 32'd0;
+      reg_file <= 64'd0;
     end
     else if (rf_write_read) begin
-      reg_file[address] <= w_data;
-    end
-    else begin
-      r_data <= reg_file[address];
+      reg_file[address[2:0]] <= w_data;
     end
   end
+
+  assign r_data = reg_file[address[2:0]];
 
 endmodule : Register_File
 

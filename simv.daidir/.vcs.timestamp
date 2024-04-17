@@ -1,0 +1,98 @@
+0 
+33
++cli+4
++itf+/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/vcsd.tab
++memcbk
++vcsd
++vpi
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/libvirsim.so /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/include
+-Xcbug=0x1
+-debug=3
+-gen_obj
+-picarchive
+-sverilog
+/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/bin/vcs1
+computer.sv
+internal_defines.vh
+internal_structures.sv
+microcodes.sv
+testbench.sv
+48
+sysc_uni_pwd=/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU
+XDG_SESSION_ID=755
+XDG_RUNTIME_DIR=/run/user/2691935
+XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr16/skuniset/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VMR_MODE_FLAG=32
+VCS_VERSION=vcs-mx_vK-2015.09
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64
+SYNOPSYS_LICENSE=/afs/ece.cmu.edu/support/synopsys/license.dat
+SYNOPSYS_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release
+SSH_TTY=/dev/pts/2
+SSH_CONNECTION=172.26.53.22 56104 172.24.56.174 22
+SSH_CLIENT=172.26.53.22 56104 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:2691935
+HISTCONTROL=ignoredups
+DC_VERSION=syn-vJ-2014.09-SP4
+DC_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/syn-vJ-2014.09-SP4
+CVS_RSH=ssh
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+AKLOG=/usr/bin/aklog
+0
+6
+1713332702 internal_defines.vh
+1713339380 testbench.sv
+1713333398 microcodes.sv
+1713333580 internal_structures.sv
+1713335535 computer.sv
+1440562444 /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/vcsd.tab
+4
+0 
+1440563255 /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/libvirsim.so
+1440562843 /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so
+1440562824 /afs/ece.cmu.edu/support/synopsys/synopsys.release/vcs-mx_vK-2015.09/linux64/lib/libsnpsmalloc.so
+1713339642 simv.daidir

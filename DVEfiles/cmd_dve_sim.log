@@ -1,0 +1,40 @@
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpwZtW07
+synUtils::sendTool -active {_icl_start_rpc -version "K-2015.09_Full64" -sync_file /tmp/vcs_dve_rpc.skuniset.10807}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.skuniset.10807}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+synopsys::dump -add {testbench.CPU} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.reg_sel} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {_vcs_unit__2006914835} -aggregates  -fid VPD0
+synopsys::dump -add {testbench.CPU.reg_file} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.pc} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.microcode} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.ir} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.alu_inst} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.ALU_src2} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {testbench.CPU.ALU_src1} -scope "." -depth 1 -fid VPD0
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit

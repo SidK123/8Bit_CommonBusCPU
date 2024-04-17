@@ -1,0 +1,96 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+gui_create_pref_category -category {schem_obj_name}
+gui_create_pref_key -category {schem_obj_name} -key {show_cell_and_pin_with_symbol_name} -value_type {bool} -value {false}
+gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {string} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab4-13-stages-of-grief/output/simulation/DVEfiles//crash_04.14-16.10/dve_session04.14-16.10.tcl} {gui_load_session -ignore_errors -file /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab3-lab3-sid-rishabh/output/simulation/DVEfiles//crash_03.21-12.52/dve_session03.21-12.52.tcl} {gui_load_session -ignore_errors -file /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab3-lab3-sid-rishabh/output/simulation/DVEfiles//crash_03.21-01.32/dve_session03.21-01.32.tcl} {gui_load_session -ignore_errors -file /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab2_forwarding/lab2-skuniset-rcowlagi/output/simulation/DVEfiles//crash_02.09-16.35/dve_session02.09-16.35.tcl} {gui_load_session -ignore_errors -file /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab1b-rcowlagi-skuniset-lab1a/output/simulation/DVEfiles//crash_02.04-19.01/dve_session02.04-19.01.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1707
+gui_set_state_value -category Layout -key child_console_size_y -value 158
+gui_set_state_value -category Layout -key child_data_coltype -value 60
+gui_set_state_value -category Layout -key child_data_colvariable -value 144
+gui_set_state_value -category Layout -key child_data_size_x -value 141
+gui_set_state_value -category Layout -key child_data_size_y -value 674
+gui_set_state_value -category Layout -key child_driver_size_x -value 1399
+gui_set_state_value -category Layout -key child_driver_size_y -value 179
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 147
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 107
+gui_set_state_value -category Layout -key child_hier_size_x -value 105
+gui_set_state_value -category Layout -key child_hier_size_y -value 674
+gui_set_state_value -category Layout -key child_hier_sort_order -value 1
+gui_set_state_value -category Layout -key child_list_down -value 399
+gui_set_state_value -category Layout -key child_list_right -value 1124
+gui_set_state_value -category Layout -key child_schematic_docknewline -value false
+gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_schematic_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_schematic_size_x -value 1667
+gui_set_state_value -category Layout -key child_schematic_size_y -value 705
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-17}
+gui_set_state_value -category Layout -key child_source_size_x -value 1464
+gui_set_state_value -category Layout -key child_source_size_y -value 670
+gui_set_state_value -category Layout -key child_watch_size_x -value 879
+gui_set_state_value -category Layout -key child_watch_size_y -value 178
+gui_set_state_value -category Layout -key child_wave_colname -value 237
+gui_set_state_value -category Layout -key child_wave_colvalue -value 237
+gui_set_state_value -category Layout -key child_wave_left -value 478
+gui_set_state_value -category Layout -key child_wave_right -value 1165
+gui_set_state_value -category Layout -key main_pos_x -value 2
+gui_set_state_value -category Layout -key main_pos_y -value 86
+gui_set_state_value -category Layout -key main_size_x -value 1709
+gui_set_state_value -category Layout -key main_size_y -value 1053
+gui_set_state_value -category Layout -key stand_list_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_list_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_list_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_list_child_size_x -value 1284
+gui_set_state_value -category Layout -key stand_list_child_size_y -value 544
+gui_set_state_value -category Layout -key stand_list_top_pos_x -value 0
+gui_set_state_value -category Layout -key stand_list_top_pos_y -value 23
+gui_set_state_value -category Layout -key stand_list_top_size_x -value 1279
+gui_set_state_value -category Layout -key stand_list_top_size_y -value 671
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-17}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1653
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 870
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 21
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 39
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1669
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1027
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key Find|m_pFindFrame|m_pFindCombo -value_type string -value {perf_counters perf pc_F1}
+gui_create_state_key -category Widget_History -key {TopLevel.1|qt_bottom_dock|DockWnd0|Console.1|console_widget_stack|tab|tab pages|Search Identifiers|m_searchQuery} -value_type string -value {payload_inbound payload_inbound payload payload payload_available}
+gui_create_state_key -category Widget_History -key TopLevel.1|qt_top_dock|&Edit|FindCombo -value_type string -value {perf_counters perf pc_F1}
+gui_create_state_key -category Widget_History -key TopLevel.2|EkTopVbox|wndWorkspace|qt_workspacechild2|Wave.1|left|filterVBox|controlHBox|unnamed -value_type string -value *syscall
+gui_create_state_key -category Widget_History -key TopLevel.2|qt_top_dock|&Edit|FindCombo -value_type string -value {perf_counters perf pc_F1}
+gui_create_state_key -category Widget_History -key dlgSearchValue|m_ValueComboBox -value_type string -value {0040_002c 3bbbf15e}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|BuildTab|m_rebuildBtnGroup|m_customCmdCombo} -value_type string -value {make {make verify TEST='benchmarks/fibi.c'} {make verify TEST='benchmarks/fibr.c'} {make verify TEST='447inputs/arithtest.S'} {make verify TEST="447inputs/arithtest.S"}}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|BuildTab|m_rebuildBtnGroup|m_customDirCombo} -value_type string -value {/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/ /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab4-13-stages-of-grief/ /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab4-13-stages-of-grief/output/simulation/ /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab3-lab3-sid-rishabh/ /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab2_forwarding/lab2-skuniset-rcowlagi/}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_VPDCombo} -value_type string -value inter.vpd
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_argsCombo} -value_type string -value {{-ucligui } {-ucligui +CORRUPT} +NAK {-ucligui +ABORT} +ABORT}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value {/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab4-13-stages-of-grief/output/simulation /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab3-lab3-sid-rishabh/output/simulation /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab2_forwarding/lab2-skuniset-rcowlagi/output/simulation /afs/andrew.cmu.edu/usr16/skuniset/private/18447/Temp_Lab2_Stalling/lab2-skuniset-rcowlagi/output/simulation}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value {/afs/andrew.cmu.edu/usr16/skuniset/private/Projects/8Bit_CommonBusCPU/simv ./simv /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab4-13-stages-of-grief/output/simulation/riscv_core ./riscv_core /afs/andrew.cmu.edu/usr16/skuniset/private/18447/lab3-lab3-sid-rishabh/output/simulation/riscv_core}
+gui_create_state_key -category SearchDialog -key MatchCase -value_type bool -value false
+gui_create_state_key -category SearchDialog -key MatchWord -value_type bool -value true
+gui_create_state_key -category SearchDialog -key SearchMode -value_type string -value Wildcards
+gui_create_state_key -category SearchDialog -key UseCombo -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
+gui_list_expand -id  Hier.1   testbench
+gui_list_expand -id  Hier.1   testbench.CPU
+gui_list_select -id Hier.1 -current_item_name testbench.CPU -current_item_type Scope  -selected  { testbench.CPU   }
+gui_list_select -id Hier.1 -current_item_name testbench.CPU.ALU_src1 -current_item_type Scope  -selected  { testbench.CPU  testbench.CPU.reg_sel  testbench.CPU.reg_file  testbench.CPU.pc  testbench.CPU.microcode  testbench.CPU.ir  testbench.CPU.alu_inst  testbench.CPU.ALU_src2  testbench.CPU.ALU_src1   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { testbench.CPU testbench.CPU.reg_sel testbench.CPU.reg_file testbench.CPU.pc testbench.CPU.microcode testbench.CPU.ir testbench.CPU.alu_inst testbench.CPU.ALU_src2 testbench.CPU.ALU_src1 } -insertionbar
+gui_sim_continue  
+gui_close_window -window TopLevel.2
