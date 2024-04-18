@@ -156,9 +156,9 @@ module Register_File(
       8'd4: r_data = reg_4; 
       8'd5: r_data = reg_5; 
       8'd6: r_data = reg_6; 
-      8'd7: r_data = reg_7; 
+      8'd7: r_data = reg_7;
+      default: r_data = reg_0; 
     endcase
   end
 
 endmodule : Register_File
-

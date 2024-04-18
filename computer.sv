@@ -34,7 +34,7 @@ module tt_um_EightBitCommonBusCPU (
   logic        imm_instruction;
   logic [3:0]  opcode;
   assign       opcode = (instruction_register[3:0]);
-  assign       imm_instruction = (opcode == ADDI);
+  assign       imm_instruction = (opcode == 4'd1);
 
   logic [7:0]  data_bus;
   data_bus_t   data_bus_sel;
@@ -93,6 +93,7 @@ module tt_um_EightBitCommonBusCPU (
     SRL:  alu_op = A_SRL_B;
     SRA:  alu_op = A_SRA_B;
     NOR:  alu_op = A_NOR_B;
+    default: alu_op = A_PLUS_B;
   endcase
   end 
 
@@ -128,7 +129,7 @@ module tt_um_EightBitCommonBusCPU (
         IR_R1       : data_bus = {5'd0, instruction_register[9:7]};
         IR_R2       : data_bus = {5'd0, instruction_register[6:4]};
         IR_RD       : data_bus = {5'd0, instruction_register[12:10]};
-        ALU         : data_bus = alu_out;
+        ALU_BUS     : data_bus = alu_out;
         RF          : data_bus = reg_read_data;
         NOP         : data_bus = 8'd0;
         default     : data_bus = 8'd0;
