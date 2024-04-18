@@ -1,7 +1,30 @@
 `default_nettype none
 `include "internal_defines.vh"
 
-module EightBitCommonBusCPU (
+/*module tt_um_EightBitCommonBusCPU (
+    input  logic [7:0] ui_in,    // Dedicated inputs - connected to the input switches
+    output logic [7:0] uo_out,   // Dedicated outputs - connected to the 7 segment display
+    input  logic [7:0] uio_in,   // IOs: Bidirectional Input path
+    output logic [7:0] uio_out,  // IOs: Bidirectional Output path
+    output logic [7:0] uio_oe,   // IOs: Bidirectional Enable path (active high: 0=input, 1=output)
+    input  logic       ena,      // will go high when the design is enabled
+    input  logic       clk,      // clock
+    input  logic       rst_n     // reset_n - low to reset);
+);
+
+
+  logic        clock, reset_n, reg_val_or_pc;
+  logic [13:0] instruction;
+  logic [7:0]  register_value_or_pc;
+  assign clock = clk;
+  assign reset_n = rst_n;
+  assign instruction = {ui_in, uio_in[7:2]};
+  assign uo_out = register_value_or_pc;
+  assign reg_val_or_pc = uio_in[1];
+  assign uio_oe = 8'h00;
+  assign uio_out = 8'h00;*/
+
+module tt_um_EightBitCommonBusCPU (
   input  logic        clock, reset_n, reg_val_or_pc,
   input  logic [13:0] instruction,
   output logic [7:0]  register_value_or_pc
@@ -9,8 +32,8 @@ module EightBitCommonBusCPU (
 
   logic [13:0] instruction_register;
   logic        imm_instruction;
-  opcode_t     opcode;
-  assign       opcode = opcode_t'(instruction_register[3:0]);
+  logic [3:0]  opcode;
+  assign       opcode = (instruction_register[3:0]);
   assign       imm_instruction = (opcode == ADDI);
 
   logic [7:0]  data_bus;
@@ -108,9 +131,10 @@ module EightBitCommonBusCPU (
         ALU         : data_bus = alu_out;
         RF          : data_bus = reg_read_data;
         NOP         : data_bus = 8'd0;
+        default     : data_bus = 8'd0;
       endcase
     end
 
                          assign register_value_or_pc = reg_val_or_pc ? output_reg : program_counter;
 
-endmodule : EightBitCommonBusCPU
+endmodule : tt_um_EightBitCommonBusCPU

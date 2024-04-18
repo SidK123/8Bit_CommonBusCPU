@@ -12,7 +12,7 @@ module testbench();
   integer       code;
   logic [3:0] cycle_count;
 
-  EightBitCommonBusCPU CPU(.clock(clock),
+  tt_um_EightBitCommonBusCPU CPU(.clock(clock),
                            .reset_n(reset_n),
                            .instruction(instruction),
                            .reg_val_or_pc(reg_val_or_pc),

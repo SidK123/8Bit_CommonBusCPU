@@ -110,23 +110,55 @@ module Register_File(
   output logic [7:0] output_reg_val
 );
 
-  logic [7:0][7:0] reg_file;
-  logic [2:0]      output_reg_addr;
+  logic [7:0] reg_0;
+  logic [7:0] reg_1;
+  logic [7:0] reg_2;
+  logic [7:0] reg_3;
+  logic [7:0] reg_4;
+  logic [7:0] reg_5;
+  logic [7:0] reg_6;
+  logic [7:0] reg_7;
 
-  assign output_reg_addr = 3'd7;
-
-  assign output_reg_val = reg_file[output_reg_addr];
+  assign output_reg_val = reg_7;
 
   always_ff @(posedge clock, negedge reset_n) begin
     if(~reset_n) begin
-      reg_file <= 64'd0;
+      reg_0 <= 8'd0;
+      reg_1 <= 8'd0;
+      reg_2 <= 8'd0;
+      reg_3 <= 8'd0;
+      reg_4 <= 8'd0;
+      reg_5 <= 8'd0;
+      reg_6 <= 8'd0;
+      reg_7 <= 8'd0;
     end
     else if (rf_write_read) begin
-      reg_file[address[2:0]] <= w_data;
+      case(address)
+        8'd0: reg_0 <= w_data;
+        8'd1: reg_1 <= w_data;
+        8'd2: reg_2 <= w_data;
+        8'd3: reg_3 <= w_data;
+        8'd4: reg_4 <= w_data;
+        8'd5: reg_5 <= w_data;
+        8'd6: reg_6 <= w_data;
+        8'd7: reg_7 <= w_data;
+        default: reg_0 <= w_data;
+      endcase 
     end
   end
 
-  assign r_data = reg_file[address[2:0]];
+  always_comb begin
+    case(address)
+      8'd0: r_data = reg_0; 
+      8'd1: r_data = reg_1; 
+      8'd2: r_data = reg_2; 
+      8'd3: r_data = reg_3; 
+      8'd4: r_data = reg_4; 
+      8'd5: r_data = reg_5; 
+      8'd6: r_data = reg_6; 
+      8'd7: r_data = reg_7; 
+    endcase
+  end
 
 endmodule : Register_File
 
