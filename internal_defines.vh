@@ -25,7 +25,7 @@ typedef enum logic [3:0] {
   IR_RD,
   IR_IMM_ARITH,
   OUT_REG,
-  ALU,
+  ALU_BUS,
   RF,
   ZERO,
   PC_PLUS_4
