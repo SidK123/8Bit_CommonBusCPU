@@ -135,6 +135,6 @@ module tt_um_EightBitCommonBusCPU (
       endcase
     end
 
-                         assign register_value_or_pc = reg_val_or_pc ? output_reg : program_counter;
+    assign register_value_or_pc = reg_val_or_pc ? output_reg : program_counter;
 
 endmodule : tt_um_EightBitCommonBusCPU
